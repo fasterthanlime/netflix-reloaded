@@ -1,4 +1,4 @@
-module NetFlix
+module Netflix
   class Credentials < Valuable
 
     CONFIG_FILENAME = File.join( File.expand_path('config'), 'credentials.yml')

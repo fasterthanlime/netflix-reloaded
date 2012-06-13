@@ -1,9 +1,9 @@
-module NetFlix
+module Netflix
 
   class << self
 	  
     def configure(yml_path)
-      @credentials ||= NetFlix::Credentials.from_file(yml_path)
+      @credentials ||= Netflix::Credentials.from_file(yml_path)
     end
   
     def logfile
@@ -22,7 +22,7 @@ module NetFlix
     end
 
     def log(message)
-      NetFlix.logger.info("[#{Time.now.to_i}] #{message}")
+      Netflix.logger.info("[#{Time.now.to_i}] #{message}")
     end  
   end # class methods
 end

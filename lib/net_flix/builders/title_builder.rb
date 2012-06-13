@@ -17,7 +17,7 @@ class TitleBuilder
 
   def initialize(data)
     @data = data
-    @title = NetFlix::Title.new
+    @title = Netflix::Title.new
 
     set_actors
     set_delivery_formats

@@ -1,4 +1,4 @@
-module NetFlix
+module Netflix
   class Title < Valuable
 
     has_value :id
@@ -24,16 +24,16 @@ module NetFlix
     class << self
 
       def complete_list
-        data = NetFlix::API::Catalog::Titles.index
+        data = Netflix::API::Catalog::Titles.index
         TitleBuilder.from_xml(data)
       end
 
       def search(params)
-        data = NetFlix::API::Catalog::Titles.search(params)
+        data = Netflix::API::Catalog::Titles.search(params)
         TitleBuilder.from_xml(data)
       end
 
     end
   end # class Title
-end # module NetFlix
+end # module Netflix
 

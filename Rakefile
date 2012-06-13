@@ -16,7 +16,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/movies-io/netflix-reloaded"
   gem.license = "MIT"
   gem.summary = %Q{copy of http://code.google.com/p/flix4r/, improved upon}
-  gem.description = %Q{a ruby client for the NetFlix API}
+  gem.description = %Q{a ruby client for the Netflix API}
   gem.email = ["axcess1@me.com", "amos@movies.io"]
   gem.authors = ["rossnelson", "nddrylliog"]
   gem.files = FileList["[A-Z]*", "{app,config,lib}/**/*"]

@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["rossnelson", "nddrylliog"]
   s.date = "2012-06-13"
-  s.description = "a ruby client for the NetFlix API"
+  s.description = "a ruby client for the Netflix API"
   s.email = ["axcess1@me.com", "amos@movies.io"]
   s.extra_rdoc_files = [
     "LICENSE.txt",

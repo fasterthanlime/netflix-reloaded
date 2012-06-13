@@ -1,9 +1,9 @@
 netflix4r
 ==========
 
-a ruby client for the NetFlix API 
+a ruby client for the Netflix API 
 
-Based on the "RESTful" resources provided by the NetFlix API, flix4r provides a clean, if _very_ incomplete, set of models for accessing NetFlix' resources.
+Based on the "RESTful" resources provided by the Netflix API, flix4r provides a clean, if _very_ incomplete, set of models for accessing Netflix' resources.
 
 Credentials
 ===========
@@ -15,8 +15,8 @@ You can get credentials from http://developer.netflix.com/.
 Example
 ==========
 
-    list = NetFlix::Title.search(:term => 'sneakers', :max_results => 2)
-    [#<NetFlix::Title:0x57f0f58 ...>, #<NetFlix::Title:0x57f0f58 ...>] # shortened for readability
+    list = Netflix::Title.search(:term => 'sneakers', :max_results => 2)
+    [#<Netflix::Title:0x57f0f58 ...>, #<Netflix::Title:0x57f0f58 ...>] # shortened for readability
     sneakers = list.first
     sneakers.title
     "Sneakers"

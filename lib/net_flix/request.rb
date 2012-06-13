@@ -1,4 +1,4 @@
-module NetFlix
+module Netflix
   class Request < Valuable
  
     RESERVED_CHARACTERS = /[^A-Za-z0-9\-\._~]/
@@ -18,7 +18,7 @@ module NetFlix
     end
 
     def authenticator
-      @auth = NetFlix::Authenticator.new(:request => self, :credentials => NetFlix.credentials)
+      @auth = Netflix::Authenticator.new(:request => self, :credentials => Netflix.credentials)
     end
 
     def target
@@ -26,7 +26,7 @@ module NetFlix
     end
 
     def log
-      NetFlix.log(target.to_s)
+      Netflix.log(target.to_s)
     end
 
     def send

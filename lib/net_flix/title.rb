@@ -18,7 +18,7 @@ module Netflix
     end
 
     def to_s
-      title || 'unknown title'
+      "#{title || 'unknown title'} (#{release_year})"
     end
 
     class << self

@@ -5,6 +5,10 @@ module Netflix
     def configure(yml_path)
       @credentials ||= Netflix::Credentials.from_file(yml_path)
     end
+
+    def credentials
+      @credentials
+    end
   
     def logfile
       File.join( File.dirname(__FILE__), '..', 'log', 'netflix.log' )

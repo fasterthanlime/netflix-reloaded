@@ -8,7 +8,9 @@ Based on the "RESTful" resources provided by the NetFlix API, flix4r provides a 
 Credentials
 ===========
 
-You must add your netflix credentials to flix4r/lib/credentials.yml. You can get credentials from http://developer.netflix.com/.
+Call `Netflix.configure(path_to_yml_config)` before doing any request. There's a sample config file in this repo.
+
+You can get credentials from http://developer.netflix.com/.
 
 Example
 ==========

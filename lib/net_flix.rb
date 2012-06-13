@@ -2,8 +2,8 @@ module NetFlix
 
   class << self
 	  
-    def credentials
-      @credentials ||= NetFlix::Credentials.from_file 
+    def configure(yml_path)
+      @credentials ||= NetFlix::Credentials.from_file(yml_path)
     end
   
     def logfile

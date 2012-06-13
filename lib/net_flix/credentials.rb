@@ -1,8 +1,6 @@
 module Netflix
   class Credentials < Valuable
 
-    CONFIG_FILENAME = File.join( File.expand_path('config'), 'credentials.yml')
-    
     has_value :key
     has_value :secret
     has_value :access_token
@@ -13,8 +11,8 @@ module Netflix
     
     class << self
 
-      def from_file
-        new(config_file_exists? ? YAML.load(File.open(CONFIG_FILENAME)) : {}) 
+      def from_file(yml_path)
+        new(config_file_exists? ? YAML.load(yml_path) : {}) 
       end
 
       def config_file_exists?

@@ -13,7 +13,7 @@ module Netflix
 
     def parameter_string
       string = ordered_keys.map do |key|
-        "#{key}=#{parameters[key]}"
+        "#{key}=#{parameters[key].to_s}"
       end.join('&')
     end
 
@@ -32,7 +32,9 @@ module Netflix
     def send
       authenticator.sign!
       log
-      Net::HTTP.get(target)
+      result = Net::HTTP.get(target)
+      Netflix.log("result = #{result}")
+      result
     end
 
     def Request.encode(value)

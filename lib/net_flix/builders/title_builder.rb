@@ -49,7 +49,7 @@ class TitleBuilder
   end
 
   def set_delivery_formats
-    @title.delivery_formats = FormatBuilder.from_movie(@data)
+    #@title.delivery_formats = FormatBuilder.from_movie(@data)
   end
 
   def set_genres
@@ -57,7 +57,7 @@ class TitleBuilder
   end
 
   def set_actors
-    @title.actors = ActorBuilder.from_movie(@data)
+    #@title.actors = ActorBuilder.from_movie(@data)
   end
 
   def title

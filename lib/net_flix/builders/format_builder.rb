@@ -13,11 +13,11 @@ class FormatBuilder
     def from_movie(movie)
 
       	    formats = movie.xpath("//title_index_item/delivery_formats/availability[not(@available_from) or @available_from < #{Time.now.to_i}]/category[@scheme='http://api.netflix.com/categories/title_formats']").map{|f| f['term'] }
-	    formats + request_cast_for(movie)
+	    formats + request_formats_for(movie)
 
     end
 
-    def request_cast_for(movie)
+    def request_formats_for(movie)
       cast_link_node = movie.search('link[@rel="http://schemas.netflix.com/catalog/titles/format_availability"]').first
       cast_link = cast_link_node['href'] if cast_link_node
 

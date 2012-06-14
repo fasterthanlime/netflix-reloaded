@@ -21,9 +21,10 @@ class TitleBuilder
   def initialize(data)
     @data = data
     @title = Netflix::Title.new
+    @title.data = data
 
-    set_actors
-    set_delivery_formats
+    #set_actors
+    #set_delivery_formats
     set_genres
     set_id
     set_release_year
@@ -52,7 +53,7 @@ class TitleBuilder
   end
 
   def set_delivery_formats
-    #@title.delivery_formats = FormatBuilder.from_movie(@data)
+    @title.delivery_formats = FormatBuilder.from_movie(@data)
   end
 
   def set_genres
@@ -60,7 +61,7 @@ class TitleBuilder
   end
 
   def set_actors
-    #@title.actors = ActorBuilder.from_movie(@data)
+    @title.actors = ActorBuilder.from_movie(@data)
   end
 
   def title

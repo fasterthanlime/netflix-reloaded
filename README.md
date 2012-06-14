@@ -15,13 +15,13 @@ You can get credentials from http://developer.netflix.com/.
 Example
 ==========
 
-    list = Netflix::Title.search(:term => 'sneakers', :max_results => 2)
+    list = Netflix::Title.search('sneakers', :max_results => 2)
     [#<Netflix::Title:0x57f0f58 ...>, #<Netflix::Title:0x57f0f58 ...>] # shortened for readability
     sneakers = list.first
     sneakers.title
     "Sneakers"
 
-    sneakers.delivery_formats
+    sneakers.delivery_formats # loaded asynchronously: yields an additional API request if it's at all available
     ['instant', 'DVD']
 
     sneakers.id

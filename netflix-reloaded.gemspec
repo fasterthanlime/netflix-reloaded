@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "netflix-reloaded"
-  s.version = "0.0.2"
+  s.version = "0.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["rossnelson", "nddrylliog"]
-  s.date = "2012-06-13"
+  s.date = "2012-06-14"
   s.description = "a ruby client for the Netflix API"
   s.email = ["axcess1@me.com", "amos@movies.io"]
   s.extra_rdoc_files = [
@@ -32,7 +32,7 @@ Gem::Specification.new do |s|
     "lib/net_flix/credentials.rb",
     "lib/net_flix/request.rb",
     "lib/net_flix/title.rb",
-    "lib/netflix4r.rb",
+    "lib/netflix-reloaded.rb",
     "lib/valuable.rb"
   ]
   s.homepage = "http://github.com/movies-io/netflix-reloaded"

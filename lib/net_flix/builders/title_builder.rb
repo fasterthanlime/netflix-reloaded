@@ -1,7 +1,10 @@
 class TitleBuilder
 
   def self.from_xml(xml)
-    return [] unless xml
+    unless xml
+      raise "Invalid response, no XML"
+      return []
+    end
 
     nxml = Nokogiri.XML(xml)
     

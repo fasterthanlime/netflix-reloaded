@@ -5,9 +5,13 @@ module Netflix
     require 'digest/sha1'
 
     has_value :request
-    has_value :timestamp, :default => Time.now.utc.to_i
-    has_value :nonce, :default => rand(1_000_000)
+    has_value :timestamp
+    has_value :nonce
     has_value :credentials
+
+    def initialize(atts)
+      super(atts.merge(:timestamp => generate_timestamp, :nonce => generate_nonce))
+    end
 
     def access_token
       credentials.access_token
@@ -19,6 +23,14 @@ module Netflix
     
     def secret
       credentials.secret
+    end
+
+    def generate_timestamp
+      Time.now.utc.to_i
+    end
+
+    def generate_nonce
+      rand(1_000_000)
     end
 
     def require_credentials

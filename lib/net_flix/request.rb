@@ -19,6 +19,8 @@ module Netflix
 
     def authenticator
       @auth = Netflix::Authenticator.new(:request => self, :credentials => Netflix.credentials)
+      Netflix.log "Generated new authenticator, nonce = #{@auth.nonce}, timestamp = #{@auth.timestamp}"
+      @auth
     end
 
     def target
@@ -32,9 +34,7 @@ module Netflix
     def send
       authenticator.sign!
       log
-      result = Net::HTTP.get(target)
-      Netflix.log("result = #{result}")
-      result
+      Net::HTTP.get(target)
     end
 
     def Request.encode(value)
